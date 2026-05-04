@@ -7,11 +7,11 @@
 
 #include <cstdint>  // per uintXX_t
 
-typedef struct Tempo {
-    uint64_t ore;  // Teoricamente sono illimitate...
+typedef struct Traccia {
+    uint64_t ore;
     uint8_t minuti;
     uint8_t secondi;
     uint32_t microsecondi;
-} Tempo_t;
+} Traccia_t;
 
 #endif //NEVER_GIVE_UP_TYPES_H

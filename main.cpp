@@ -13,24 +13,24 @@ int main() {
     cout<<"Questo è il main che puoi usare per testare la tua libreria"<<endl;
     cout<<"Sentiti libero di aggiungere o corregere il codice in questo file se lo ritieni utile"<<endl;
 
-    Tempo_t alpha;
-    Tempo_t beta;
-    Tempo_t gamma;
+    Traccia_t alpha;
+    Traccia_t beta;
+    Traccia_t gamma;
 
-    create(alpha, 12,30, 10, 100);
-    print(&alpha);
-    create(beta, 12,130, -40, 100);
-    print(&beta);
-    create(gamma, 1,45, 40, 100);
-    print(&gamma);
-    cout<<equal(gamma, alpha);
-    cout<<equal(gamma, gamma);
-    cout<<before(alpha, gamma);
-    cout<<after(alpha, gamma);
+    crea_traccia(alpha, 12,30, 10, 100);
+    stampa_info(&alpha);
+    crea_traccia(beta, 12,130, -40, 100);
+    stampa_info(&beta);
+    crea_traccia(gamma, 1,45, 40, 100);
+    stampa_info(&gamma);
+    cout<<stessa_durata(gamma, alpha);
+    cout<<stessa_durata(gamma, gamma);
+    cout<<piu_breve(alpha, gamma);
+    cout<<piu_lunga(alpha, gamma);
 
-    add(gamma, gamma);
-    print(&gamma);
-    diff(alpha, &gamma);
-    print(&gamma);
-    print(&alpha);
+    accoda(gamma, gamma);
+    stampa_info(&gamma);
+    taglia(alpha, &gamma);
+    stampa_info(&gamma);
+    stampa_info(&alpha);
 }
