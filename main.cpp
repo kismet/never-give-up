@@ -1,16 +1,36 @@
 #include <iostream>
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+#include "includes/libs.h"
+
+using namespace std;
+/*
+ * QUESTO CODICE E' FATTO PER AIUTARTI A TESTARE LA TUA LIBRERIA
+ * MA CONTIENE QUALCHE PICCOLA IMPRECISIONE, CHE DOVRAI CORREGGERE PRIMA DI RIUSCIRE
+ * A COMPILARE
+ */
 int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
 
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
-    }
+    cout<<"Questo è il main che puoi usare per testare la tua libreria"<<endl;
+    cout<<"Sentiti libero di aggiungere o corregere il codice in questo file se lo ritieni utile"<<endl;
 
-    return 0;
-    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
+    Tempo_t alpha;
+    Tempo_t beta;
+    Tempo_t gamma;
+
+    create(alpha, 12,30, 10, 100);
+    print(&alpha);
+    create(beta, 12,130, -40, 100);
+    print(&beta);
+    create(gamma, 1,45, 40, 100);
+    print(&gamma);
+    cout<<equal(gamma, alpha);
+    cout<<equal(gamma, gamma);
+    cout<<before(alpha, gamma);
+    cout<<after(alpha, gamma);
+
+    add(gamma, gamma);
+    print(&gamma);
+    diff(alpha, &gamma);
+    print(&gamma);
+    print(&alpha);
 }
