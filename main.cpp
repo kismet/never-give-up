@@ -19,7 +19,7 @@ int main() {
 
     inizializza(alpha, 12,30, 10, 100);
     mostra(&alpha);
-    inizializza((beta, 12,130, -40, 100);
+    inizializza(beta, 12,130, -40, 100);
     mostra(&beta);
     inizializza(gamma, 1,45, 40, 100);
     mostra(&gamma);

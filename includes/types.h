@@ -8,10 +8,10 @@
 #include <cstdint>
 
 typedef struct Cronometro {
-    uint64_t ore;
-    uint8_t minuti;
-    uint8_t secondi;
     uint32_t microsecondi;
+    uint8_t secondi;
+    uint8_t minuti;
+    uint64_t ore;
 } Cronometro_t;
 
 #endif //NEVER_GIVE_UP_TYPES_H
