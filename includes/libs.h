@@ -2,25 +2,25 @@
 #define NEVER_GIVE_UP_LIBS_H
 
 // Inizializzazione comoda della struct se l'inizializzazione non è possibile restituisce false
-bool create(Tempo_t& t, uint16_t o, uint8_t m, uint8_t s, uint32_t ms);
+bool crea_traccia(Traccia_t& t, uint16_t o, uint8_t m, uint8_t s, uint32_t ms);
 
-// True se tempo1 viene prima di tempo2
-bool before(const Tempo_t& tempo1, const Tempo_t& tempo2);
+// True se traccia1 è meno lunga di traccia2
+bool piu_breve(const Traccia_t& traccia1, const Traccia_t& traccia2);
 
-// True se tempo1 viene dopo tempo2
-bool after(const Tempo_t& tempo1, const Tempo_t& tempo2);
+// True se traccia1 è più lunga traccia2
+bool piu_lunga(const Traccia_t& traccia1, const Traccia_t& traccia2);
 
-// True se e solo se tempo1 e tempo2 sono uguali
-bool equal(const Tempo_t& tempo1, const Tempo_t& tempo2);
+// True se e solo se traccia1 e traccia2 sono uguali
+bool stessa_durata(const Traccia_t& traccia1, const Traccia_t& traccia2);
 
-// Somma i due tempi ed il risultato va in tempo1
-void add(Tempo_t& tempo1, Tempo_t& tempo2);
+// Somma la durata delle tracce ed il risultato va in traccia1
+void accoda(Traccia_t& traccia1, Traccia_t& traccia2);
 
-// Sottrae tempo2 da tempo1 se possibile e restituisce true altrimenti restituisce false non effettua la sottrazione
-// il tempo non può mai essere negativo
-bool diff(Tempo_t& tempo1, const Tempo_t* tempo2);
+// Sottrae la durata di traccia2 da traccia1 se possibile e restituisce true altrimenti restituisce false e non effettua
+// la sottrazione. La sottrazione non è valida traccia1 diventa negativa
+bool taglia(Traccia_t& traccia1, const Traccia_t* traccia2);
 
-// Stampa un tempo in modo formattato HHH:MM:SS.MS
-void print( Tempo_t* tempo);
+// Stampa un traccia in modo formattato HHH:MM:SS.MS
+void stampa_info( Traccia_t* traccia);
 
 #endif //NEVER_GIVE_UP_LIBS_H
