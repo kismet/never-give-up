@@ -7,11 +7,11 @@
 
 #include <cstdint>
 
-typedef struct Cronometro {
-    uint64_t ore;
-    uint8_t minuti;
-    uint8_t secondi;
-    uint32_t microsecondi;
-} Cronometro_t;
+typedef struct Batteria {
+    uint64_t hours;
+    uint8_t minutes;
+    uint8_t seconds;
+    uint32_t microseconds;
+} Batteria_t;
 
 #endif //NEVER_GIVE_UP_TYPES_H

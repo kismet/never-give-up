@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "includes/libs.h"
 
 using namespace std;
@@ -13,24 +12,24 @@ int main() {
     cout<<"Questo è il main che puoi usare per testare la tua libreria"<<endl;
     cout<<"Sentiti libero di aggiungere o corregere il codice in questo file se lo ritieni utile"<<endl;
 
-    Cronometro_t alpha;
-    Cronometro_t beta;
-    Cronometro_t gamma;
+    Batteria_t alpha;
+    Batteria_t beta;
+    Batteria_t gamma;
 
-    inizializza(alpha, 12,30, 10, 100);
-    mostra(&alpha);
-    inizializza((beta, 12,130, -40, 100);
-    mostra(&beta);
-    inizializza(gamma, 1,45, 40, 100);
-    mostra(&gamma);
-    cout<<coincide(gamma, alpha);
-    cout<<coincide(gamma, gamma);
-    cout<<precede(alpha, gamma);
-    cout<<segue(alpha, gamma);
+    setup(alpha, 12,30, 10, 100);
+    stampa_autonomia(&alpha);
+    setup(beta, 12,130, -40, 100);
+    stampa_autonomia(&beta);
+    setup(gamma, 1,45, 40, 100);
+    stampa_autonomia(&gamma);
+    cout<<stessa_autonomia(gamma, alpha);
+    cout<<stessa_autonomia(gamma, gamma);
+    cout<<minor_autonomia(alpha, gamma);
+    cout<<maggior_autonomia(alpha, gamma);
 
-    somma_tempi(gamma, gamma);
-    mostra(&gamma);
-    scarto(alpha, &gamma);
-    mostra(&gamma);
-    mostra(&alpha);
+    ricarica(gamma, gamma);
+    stampa_autonomia(&gamma);
+    scarica(alpha, &gamma);
+    stampa_autonomia(&gamma);
+    stampa_autonomia(&alpha);
 }
