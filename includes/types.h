@@ -5,13 +5,13 @@
 #ifndef NEVER_GIVE_UP_TYPES_H
 #define NEVER_GIVE_UP_TYPES_H
 
-#include <cstdint>  // per uintXX_t
+#include <cstdint>
 
-typedef struct Tempo {
-    uint64_t ore;  // Teoricamente sono illimitate...
+typedef struct Cronometro {
+    uint64_t ore;
     uint8_t minuti;
     uint8_t secondi;
     uint32_t microsecondi;
-} Tempo_t;
+} Cronometro_t;
 
 #endif //NEVER_GIVE_UP_TYPES_H

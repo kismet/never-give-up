@@ -2,25 +2,25 @@
 #define NEVER_GIVE_UP_LIBS_H
 
 // Inizializzazione comoda della struct se l'inizializzazione non è possibile restituisce false
-bool create(Tempo_t& t, uint16_t o, uint8_t m, uint8_t s, uint32_t ms);
+void inizializza(Cronometro_t& c, uint16_t o, uint8_t m, uint8_t s, uint32_t ms);
 
-// True se tempo1 viene prima di tempo2
-bool before(const Tempo_t& tempo1, const Tempo_t& tempo2);
+//TRUE se e solo se c1 precede c2
+bool precede(const Cronometro_t& c1, const Cronometro_t& c2);
 
-// True se tempo1 viene dopo tempo2
-bool after(const Tempo_t& tempo1, const Tempo_t& tempo2);
+//TRUE se e solo se c2 precede c1
+bool segue(const Cronometro_t& c1, const Cronometro_t& c2);
 
-// True se e solo se tempo1 e tempo2 sono uguali
-bool equal(const Tempo_t& tempo1, const Tempo_t& tempo2);
+//TRUE se e solo se c1 e c2 rappresentano lo stesso Cronometro
+bool coincide(const Cronometro_t& c1, const Cronometro_t& c2);
 
-// Somma i due tempi ed il risultato va in tempo1
-void add(Tempo_t& tempo1, Tempo_t& tempo2);
+//Aggiunge a c1 il valore di c2
+void somma_tempi(Cronometro_t& c1, Cronometro_t& c2);
 
-// Sottrae tempo2 da tempo1 se possibile e restituisce true altrimenti restituisce false non effettua la sottrazione
-// il tempo non può mai essere negativo
-bool diff(Tempo_t& tempo1, const Tempo_t* tempo2);
+//Sottrare a c1 il valore di c2 se possibile e restiutisce TRUE, se non è possibile sottrare c2 a c1 allora non fa nulla
+//e restituisce FALSE. La sottrazione non si può fare se il risultato viene negativo.
+bool scarto(const Cronometro_t& c1, const Cronometro_t* c2);
 
-// Stampa un tempo in modo formattato HHH:MM:SS.MS
-void print( Tempo_t* tempo);
+// Stampa il calore del Cronometro usando il formato  HHH:MM:SS.MS
+void mostra(Cronometro_t* c);
 
 #endif //NEVER_GIVE_UP_LIBS_H
