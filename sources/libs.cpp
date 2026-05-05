@@ -1,6 +1,9 @@
 #include "../includes/types.h"
 #include "../includes/libs.h"
 
+#include <iostream>
+using namespace std;
+
 bool setup(Batteria_t& c, uint16_t o, uint8_t m, uint8_t s, uint32_t ms) {
     bool inizializzazioneCorretta = true;
 
@@ -46,3 +49,12 @@ bool minor_autonomia(const Batteria_t &c1, const Batteria_t &c2) {
 
     return autonomia;
 }
+
+void stampa_autonomia(Batteria_t* c) {
+
+    cout<<c->hours<<":";
+    cout<<c->minutes<<":";
+    cout<<c->seconds<<".";
+    cout<<c->microseconds<<endl;
+}
+
