@@ -1,7 +1,10 @@
 //
 // Created by stefy on 04/05/2026.
 //
-
+// Autore: (Tosi Gianmarco)
+// Data:   (2026/05/05)
+// Classe: 3CI
+// Fila:    (B)
 #ifndef NEVER_GIVE_UP_TYPES_H
 #define NEVER_GIVE_UP_TYPES_H
 

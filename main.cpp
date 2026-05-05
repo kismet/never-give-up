@@ -2,6 +2,10 @@
 
 #include "includes/libs.h"
 #include "includes/types.h"
+// Autore: (Tosi Gianmarco)
+// Data:   (2026/05/05)
+// Classe: 3CI
+// Fila:    (B)
 
 using namespace std;
 /*

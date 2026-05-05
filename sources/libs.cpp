@@ -2,6 +2,10 @@
 #include "../includes/libs.h"
 #include <iostream>
 using namespace std;
+// Autore: (Tosi Gianmarco)
+// Data:   (2026/05/05)
+// Classe: 3CI
+// Fila:    (B)
 
 // Inizializzazione comoda della struct se l'inizializzazione non è possibile restituisce false
 bool crea_traccia(Traccia_t& t, int16_t o, int8_t m, int8_t s, int32_t ms) {
