@@ -8,10 +8,10 @@
 #include <cstdint>  // per uintXX_t
 
 typedef struct Traccia {
-    uint64_t ore;
-    uint64_t minuti;
-    uint64_t secondi;
-    uint64_t microsecondi;
+    int64_t ore;
+    int64_t minuti;
+    int64_t secondi;
+    int64_t microsecondi;
 } Traccia_t;
 
 #endif //NEVER_GIVE_UP_TYPES_H

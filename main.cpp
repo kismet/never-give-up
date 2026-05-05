@@ -19,21 +19,21 @@ int main() {
     Traccia_t gamma;
 
     crea_traccia(alpha, 12,30, 10, 100);
-    stampa_info(alpha);
-    crea_traccia(beta, 12,130, -1, 100);
-    stampa_info(beta);
+    stampa_info(&alpha);
+    crea_traccia(beta, 12,130, -40, 100);
+    stampa_info(&beta);
     crea_traccia(gamma, 1,45, 40, 100);
-    stampa_info(gamma);
+    stampa_info(&gamma);
     cout<<stessa_durata(gamma, alpha);
     cout<<stessa_durata(gamma, gamma);
     cout<<piu_breve(alpha, gamma);
     cout<<piu_lunga(alpha, gamma);
 
     accoda(gamma, gamma);
-    stampa_info(gamma);
+    stampa_info(&gamma);
     taglia(alpha, &gamma);
-    stampa_info(gamma);
-    stampa_info(alpha);
+    stampa_info(&gamma);
+    stampa_info(&alpha);
 
 return 0;
 
