@@ -21,6 +21,6 @@ bool piu_lunga(const Traccia_t& traccia1, const Traccia_t& traccia2);
 bool stessa_durata(const Traccia_t& traccia1, const Traccia_t& traccia2);
 
 // Stampa un traccia in modo formattato HHH:MM:SS.MS
-void stampa_info( Traccia_t* traccia);
+void stampa_info( Traccia_t& traccia);
 
 #endif //NEVER_GIVE_UP_LIBS_H

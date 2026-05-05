@@ -1,10 +1,21 @@
 #include "../includes/types.h"
 #include "../includes/libs.h"
+#include <iostream>
+using namespace std;
 
 // Inizializzazione comoda della struct se l'inizializzazione non è possibile restituisce false
 bool crea_traccia(Traccia_t& t, uint16_t o, uint8_t m, uint8_t s, uint32_t ms) {
 
-    if (o<0 or m<0 or s<0 or ms<0) {
+    if (o<0) {
+        return false;
+    }
+    if (m<0) {
+        return false;
+    }
+    if (s<0) {
+        return false;
+    }
+    if (ms<0) {
         return false;
     }
     while (ms>=1000000) {
@@ -68,6 +79,7 @@ bool stessa_durata(const Traccia_t& traccia1, const Traccia_t& traccia2) {
 }
 
 // Stampa un traccia in modo formattato HHH:MM:SS.MS
-void stampa_info( Traccia_t* traccia) {
+void stampa_info( Traccia_t& traccia) {
 
+    cout << (int)traccia.ore <<":"<< (int)traccia.minuti <<":"<< (int)traccia.secondi <<":"<< (int)traccia.microsecondi<< endl;
 }
