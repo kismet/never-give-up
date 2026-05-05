@@ -1,6 +1,8 @@
 #include <iostream>
 
 #include "includes/libs.h"
+#include "includes/types.h"
+extern Traccia_t;
 
 using namespace std;
 /*
@@ -33,4 +35,5 @@ int main() {
     taglia(alpha, &gamma);
     stampa_info(&gamma);
     stampa_info(&alpha);
+
 }
