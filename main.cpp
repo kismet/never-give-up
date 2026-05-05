@@ -1,5 +1,10 @@
-#include <iostream>
+// Autore: (Clipa Amos)
+// Data:   (2026/05/05)
+// Classe: 3CI
+// Fila:    (A)
 
+#include <iostream>
+#include "includes/types.h"
 #include "includes/libs.h"
 
 using namespace std;
@@ -33,4 +38,5 @@ int main() {
     diff(alpha, &gamma);
     print(&gamma);
     print(&alpha);
+
 }

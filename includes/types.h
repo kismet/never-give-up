@@ -14,4 +14,7 @@ typedef struct Tempo {
     uint32_t microsecondi;
 } Tempo_t;
 
+
+
+
 #endif //NEVER_GIVE_UP_TYPES_H
