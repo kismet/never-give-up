@@ -11,7 +11,7 @@ void mostra(Cronometro_t* c);
 //TRUE se e solo se c1 precede c2
 bool precede(const Cronometro_t& c1, const Cronometro_t& c2);
 
-// Inizializzazione comoda della struct se l'inizializzazione non è possibile restituisce false
+// Inizializzazione comoda della struct se l'inizializzazione
 void inizializza(Cronometro_t& c, uint16_t o, uint8_t m, uint8_t s, uint32_t ms);
 
 //TRUE se e solo se c2 precede c1
