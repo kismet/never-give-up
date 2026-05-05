@@ -25,3 +25,54 @@ bool before(const Tempo_t& tempo1, const Tempo_t& tempo2) {
         return false;
     }
 }
+
+bool after(const Tempo_t& tempo1, const Tempo_t& tempo2) {
+    if (tempo1.microsecondi>tempo2.microsecondi) {
+        if (tempo1.secondi>tempo2.secondi) {
+            if (tempo1.minuti>tempo2.minuti) {
+                if (tempo1.ore>tempo2.ore) {
+                    return true;
+                }
+            }
+        }
+    }
+    else {
+        return false;
+    }
+}
+
+bool equal(const Tempo_t& tempo1, const Tempo_t& tempo2) {
+    if (tempo1.microsecondi==tempo2.microsecondi) {
+        if (tempo1.secondi==tempo2.secondi) {
+            if (tempo1.minuti==tempo2.minuti) {
+                if (tempo1.ore==tempo2.ore) {
+                    return true;
+                }
+            }
+        }
+    }
+    else {
+        return false;
+    }
+}
+
+void add(Tempo_t& tempo1, Tempo_t& tempo2) {
+    tempo1.ore=tempo1.ore+tempo2.ore;
+    tempo1.minuti=tempo1.minuti+tempo2.minuti;
+    tempo1.secondi=tempo1.secondi+tempo2.secondi;
+    tempo1.microsecondi=tempo1.microsecondi+tempo2.microsecondi;
+}
+
+bool diff(Tempo_t& tempo1, const Tempo_t* tempo2) {
+    if (after(tempo1, tempo2)) {
+        tempo1.ore=tempo1.ore-tempo2.ore;
+        tempo1.minuti=tempo1.minuti-tempo2.minuti;
+        tempo1.secondi=tempo1.secondi-tempo2.secondi;
+        tempo1.microsecondi=tempo1.microsecondi-tempo2.microsecondi;
+
+        return true;
+    }
+    else {
+        return false;
+    }
+}
