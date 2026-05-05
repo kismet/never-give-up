@@ -73,7 +73,7 @@ void ricarica(Batteria_t& c1, Batteria_t& c2) {
 
 }
 
-bool scarica(const Batteria_t& c1, const Batteria_t* c2) {
+bool scarica( Batteria_t& c1, const Batteria_t* c2) {
 
     if ( ( c1.hours - c2->hours ) > 0 ) {
         c1.hours -= c2->hours;
