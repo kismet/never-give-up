@@ -12,13 +12,14 @@ bool before(const Tempo_t& tempo1, const Tempo_t& tempo2) {
     if (tempo1 < tempo2) {
         return true;
     }
-    return false;
 
 };
 
 // True se tempo1 viene dopo tempo2
 bool after(const Tempo_t& tempo1, const Tempo_t& tempo2) {
-
+    if (tempo1 < tempo2) {
+        return true;
+    }
 };
 
 // True se e solo se tempo1 e tempo2 sono uguali
@@ -26,7 +27,6 @@ bool equal(const Tempo_t& tempo1, const Tempo_t& tempo2) {
     if (tempo1 == tempo2) {
         return true;
     }
-    return false;
 };
 
 // Somma i due tempi ed il risultato va in tempo1
