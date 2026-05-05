@@ -61,5 +61,50 @@ bool maggior_autonomia(const Batteria_t& c1, const Batteria_t& c2) {
     }
 
     return false;
-    
+
+}
+
+void ricarica(Batteria_t& c1, Batteria_t& c2) {
+
+    c1.hours += c2.hours;
+    c1.minutes += c2.minutes;
+    c1.seconds += c2.seconds;
+    c1.microseconds += c2.microseconds;
+
+}
+
+bool scarica(const Batteria_t& c1, const Batteria_t* c2) {
+
+    if ( ( c1.hours - c2->hours ) > 0 ) {
+        c1.hours -= c2->hours;
+
+        if ( ( c1.minutes - c2->minutes ) > 0 ) {
+            c1.minutes -= c2->minutes;
+
+            if ( ( c1.seconds - c2->seconds ) > 0 ) {
+                c1.seconds -= c2->seconds;
+
+                if ( ( c1.microseconds - c2->microseconds ) > 0 ) {
+                    return true;
+                }
+            }
+        }
+    }
+
+    return false;
+}
+
+bool stessa_autonomia(const Batteria_t& c1, const Batteria_t& c2) {
+
+    if ( c1.hours == c2.hours ) {
+        if ( c1.minutes == c2.minutes ) {
+            if ( c1.seconds == c2.seconds ) {
+                if ( c1.microseconds == c2.microseconds ) {
+                    return true;
+                }
+            }
+        }
+    }
+
+    return false;
 }
