@@ -16,7 +16,7 @@ using namespace std;
  */
 int main() {
 
-    cout<<"Questo è il main che puoi usare per testare la tua libreria"<<endl;
+    cout<<"Questo e' il main che puoi usare per testare la tua libreria"<<endl;
     cout<<"Sentiti libero di aggiungere o corregere il codice in questo file se lo ritieni utile"<<endl;
 
     Cronometro_t alpha;
@@ -24,19 +24,19 @@ int main() {
     Cronometro_t gamma;
 
     inizializza(alpha, 12,30, 10, 100);
-    mostra(&alpha);
+    mostra(alpha);
     inizializza(beta, 12,130, -40, 100);
-    mostra(&beta);
+    mostra(beta);
     inizializza(gamma, 1,45, 40, 100);
-    mostra(&gamma);
+    mostra(gamma);
     cout<<coincide(gamma, alpha);
     cout<<coincide(gamma, gamma);
     cout<<precede(alpha, gamma);
     cout<<segue(alpha, gamma);
 
     somma_tempi(gamma, gamma);
-    mostra(&gamma);
-    scarto(alpha, &gamma);
-    mostra(&gamma);
-    mostra(&alpha);
+    mostra(gamma);
+    scarto(alpha, gamma);
+    mostra(gamma);
+    mostra(alpha);
 }
