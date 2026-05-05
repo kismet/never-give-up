@@ -10,6 +10,18 @@
 #include <ostream>
 using namespace std;
 
+bool setup(Batteria_t& c, uint16_t o, uint8_t m, uint8_t s, uint32_t ms) {
+    c.hours = o;
+    c.minutes = m;
+    c.seconds = s;
+    c.microseconds = ms;
+    /*
+    if () {
+        return false;
+    }*/
+    return true;
+}
+
 bool minor_autonomia(const Batteria_t& c1, const Batteria_t& c2) {
     if(c1.hours < c2.hours) {
         return true;
