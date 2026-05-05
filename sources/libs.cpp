@@ -81,3 +81,22 @@ void ricarica(Batteria_t& c1, Batteria_t& c2) {
     c1.hours += c2.hours;
 
 }
+
+bool stessa_autonomia(const Batteria_t& c1, const Batteria_t& c2) {
+    bool stessaAutonomia = true;
+
+    if (c1.hours != c2.hours) {
+        stessaAutonomia = false;
+    }
+    if (c1.minutes != c2.minutes) {
+        stessaAutonomia = false;
+    }
+    if (c1.seconds != c2.seconds) {
+        stessaAutonomia = false;
+    }
+    if (c1.microseconds != c2.microseconds) {
+        stessaAutonomia = false;
+    }
+
+    return stessaAutonomia;
+}
