@@ -1,11 +1,16 @@
+// Autore: (Landucci Gianmarco)
+// Data:   (2026/05/05)
+// Classe: 3CIs
+// Fila:    (C)
+
 #ifndef NEVER_GIVE_UP_LIBS_H
 #define NEVER_GIVE_UP_LIBS_H
 
 //Sottrare a c1 il valore di c2 se possibile e restiutisce TRUE, se non è possibile sottrare c2 a c1 allora non fa nulla
 //e restituisce FALSE. La sottrazione non si può fare se il risultato viene negativo.
-bool scarto(const Cronometro_t& c1, const Cronometro_t* c2);
+bool scarto(Cronometro c1, const Cronometro_t *c2);
 
-// Stampa il calore del Cronometro usando il formato  HHH:MM:SS.MS
+// Stampa il valore del Cronometro usando il formato  HHH:MM:SS.MS
 void mostra(Cronometro_t* c);
 
 //TRUE se e solo se c1 precede c2
