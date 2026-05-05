@@ -10,7 +10,6 @@
 #include <iostream>
 using namespace std;
 
-// TODO: restituire true o false
 bool setup(Batteria_t& c, uint64_t o, uint8_t m, uint8_t s, uint32_t ms) {
 
     // Ore
