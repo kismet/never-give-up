@@ -97,3 +97,16 @@ bool scarica(Batteria_t& c1, Batteria_t* c2) {
     }
     return true;
 }
+
+bool stessa_autonomia(const Batteria_t& c1, const Batteria_t& c2) {
+    if(c1.hours == c2.hours) {
+        if (c1.minutes == c2.minutes) {
+            if (c1.seconds == c2.seconds) {
+                if (c1.microseconds == c2.microseconds) {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
