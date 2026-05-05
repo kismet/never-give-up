@@ -12,6 +12,7 @@ typedef struct Tempo {
     uint8_t minuti;
     uint8_t secondi;
     uint32_t microsecondi;
+
 } Tempo_t;
 
 
