@@ -3,6 +3,11 @@
 #include "includes/libs.h"
 #include "includes/types.h"
 
+// Autore: (Calcagni Luca)
+// Data:   (2026/05/05)
+// Classe: 3CI
+// Fila:    (C)
+
 using namespace std;
 /*
  * QUESTO CODICE E' FATTO PER AIUTARTI A TESTARE LA TUA LIBRERIA

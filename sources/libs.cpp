@@ -1,23 +1,49 @@
 #include "../includes/types.h"
 #include "../includes/libs.h"
 
+#include <iostream>
+
+// Autore: (Calcagni Luca)
+// Data:   (2026/05/05)
+// Classe: 3CI
+// Fila:    (C)
+
 //Sottrare a c1 il valore di c2 se possibile e restiutisce TRUE, se non è possibile sottrare c2 a c1 allora non fa nulla
 //e restituisce FALSE. La sottrazione non si può fare se il risultato viene negativo.
-bool scarto(const Cronometro_t& c1, const Cronometro_t* c2){
-
+bool scarto(Cronometro_t& c1, const Cronometro_t& c2){
+    if (c1.ore -= c2.ore < 0) {
+        return false;
+    }
+    if (c1.minuti -= c2.minuti < 0) {
+        return false;
+    }
+    if (c1.secondi -= c2.secondi < 0) {
+        return false;
+    }
+    if (c1.microsecondi -= c2.microsecondi < 0) {
+        return false;
+    }
+    c1.ore -= c2.ore;
+    c1.minuti -= c2.minuti;
+    c1.secondi -= c2.secondi;
+    c1.microsecondi -= c2.microsecondi;
 }
 // Stampa il calore del Cronometro usando il formato  HHH:MM:SS.MS
-void mostra(Cronometro_t* c){
-
+void mostra(Cronometro_t c){
+    std::cout << c.ore << ":" << c.minuti << ":" << c.secondi << ":" << c.microsecondi << std::endl;
 }
+
 //TRUE se e solo se c1 precede c2
-bool precede(const Cronometro_t& c1, const Cronometro_t& c2) {
-
+bool precede(const Cronometro_t& c1, const Cronometro_t& c2){
+    
 }
 
-// Inizializzazione comoda della struct se l'inizializzazione
-void inizializza(Cronometro_t& c, uint16_t o, uint8_t m, uint8_t s, uint32_t ms) {
-
+// Inizializzazione comoda della struct
+bool inizializza(Cronometro_t& c, uint16_t o, uint8_t m, uint8_t s, uint32_t ms) {
+    if (o > 0 || m > 0 && m < 59 || s > 0 && s < 59 || ms > 0 && ms < 999) {
+        return true;
+    }
+    return false;
 }
 
 //TRUE se e solo se c2 precede c1
