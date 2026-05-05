@@ -58,3 +58,21 @@ void stampa_autonomia(Batteria_t* c) {
     cout<<c->microseconds<<endl;
 }
 
+void ricarica(Batteria_t& c1, Batteria_t& c2) {
+    c1.microseconds += c2.microseconds;
+
+    c1.seconds += c2.seconds;
+    if (c1.seconds >= 60) {
+        c1.seconds -= 60;
+        c1.minutes++;
+    }
+
+    c1.minutes += c2.minutes;
+    if (c1.minutes >= 60) {
+        c1.minutes -= 60;
+        c1.hours++;
+    }
+
+    c1.hours += c2.hours;
+
+}
