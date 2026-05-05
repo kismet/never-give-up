@@ -1,6 +1,11 @@
 #include "../includes/types.h"
 #include "../includes/libs.h"
 
+// Autore: (Turini Elia)
+// Data:   (2026/05/05)
+// Classe: 3CI
+// Fila:    (FILA:D)
+
 #include <iostream>
 using namespace std;
 

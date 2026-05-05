@@ -2,6 +2,11 @@
 #include "includes/libs.h"
 #include "includes/types.h"
 
+// Autore: (Turini Elia)
+// Data:   (2026/05/05)
+// Classe: 3CI
+// Fila:    (FILA:D)
+
 using namespace std;
 /*
  * QUESTO CODICE E' FATTO PER AIUTARTI A TESTARE LA TUA LIBRERIA
