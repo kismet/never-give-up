@@ -10,7 +10,7 @@ using namespace std;
  */
 int main() {
 
-    cout<<"Questo è il main che puoi usare per testare la tua libreria"<<endl;
+    cout<<"Questo e' il main che puoi usare per testare la tua libreria"<<endl;
     cout<<"Sentiti libero di aggiungere o corregere il codice in questo file se lo ritieni utile"<<endl;
 
     Tempo_t alpha;
@@ -23,10 +23,10 @@ int main() {
     print(&beta);
     create(gamma, 1,45, 40, 100);
     print(&gamma);
-    cout<<equal(gamma, alpha);
-    cout<<equal(gamma, gamma);
-    cout<<before(alpha, gamma);
-    cout<<after(alpha, gamma);
+    cout<<equal(gamma, alpha) << '\n';
+    cout<<equal(gamma, gamma) << '\n';
+    cout<<before(alpha, gamma) << '\n';
+    cout<<after(alpha, gamma) << '\n';
 
     add(gamma, gamma);
     print(&gamma);

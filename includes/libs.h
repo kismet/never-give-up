@@ -1,6 +1,7 @@
 #ifndef NEVER_GIVE_UP_LIBS_H
 #define NEVER_GIVE_UP_LIBS_H
 
+#include "../includes/types.h"
 // Inizializzazione comoda della struct se l'inizializzazione non è possibile restituisce false
 bool create(Tempo_t& t, uint16_t o, uint8_t m, uint8_t s, uint32_t ms);
 
