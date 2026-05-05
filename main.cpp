@@ -1,3 +1,8 @@
+// Autore: (Esposito Lorenzo)
+// Data:   (2026/05/05)
+// Classe: 3CI
+// Fila:    (Fila D)
+
 #include <iostream>
 #include "includes/libs.h"
 #include "includes/types.h"

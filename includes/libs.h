@@ -1,3 +1,8 @@
+// Autore: (Esposito Lorenzo)
+// Data:   (2026/05/05)
+// Classe: 3CI
+// Fila:    (Fila D)
+
 #ifndef NEVER_GIVE_UP_LIBS_H
 #define NEVER_GIVE_UP_LIBS_H
 
