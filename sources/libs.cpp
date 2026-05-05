@@ -4,7 +4,7 @@
 using namespace std;
 
 // Inizializzazione comoda della struct se l'inizializzazione non è possibile restituisce false
-bool crea_traccia(Traccia_t& t, uint16_t o, uint8_t m, uint8_t s, uint32_t ms) {
+bool crea_traccia(Traccia_t& t, int16_t o, int8_t m, int8_t s, int32_t ms) {
 
     if (o<0) {
         return false;
