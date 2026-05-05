@@ -13,6 +13,8 @@ using namespace std;
  * MA CONTIENE QUALCHE PICCOLA IMPRECISIONE, CHE DOVRAI CORREGGERE PRIMA DI RIUSCIRE
  * A COMPILARE
  */
+
+
 int main() {
 
     cout<<"Questo è il main che puoi usare per testare la tua libreria"<<endl;
@@ -24,7 +26,7 @@ int main() {
 
     create(alpha, 12,30, 10, 100);
     print(&alpha);
-    create(beta, 12,130, -40, 100);
+    create(beta, 12,130, 40, 100);
     print(&beta);
     create(gamma, 1,45, 40, 100);
     print(&gamma);
