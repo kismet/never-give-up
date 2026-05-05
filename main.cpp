@@ -1,6 +1,7 @@
 #include <iostream>
 
-#include "includes/libs.h"
+#include "includes/types.h"
+#include "sources/libs.cpp"
 
 using namespace std;
 /*
