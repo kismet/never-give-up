@@ -16,7 +16,6 @@ int main() {
     Cronometro_t alpha;
     Cronometro_t beta;
     Cronometro_t gamma;
-
     inizializza(alpha, 12,30, 10, 100);
     mostra(&alpha);
     inizializza(beta, 12,130, -40, 100);
