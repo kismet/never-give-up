@@ -40,7 +40,7 @@ bool minor_autonomia(const Batteria_t& c1, const Batteria_t& c2) {
 }
 
 void stampa_autonomia(Batteria_t* c) {
-    cout << c->hours << ":" << c->minutes << ":" << c->seconds << "." << c->microseconds << endl;
+    cout << c->hours << ":" << (int)c->minutes << ":" << (int)c->seconds << "." << c->microseconds << endl;
 }
 
 bool maggior_autonomia(const Batteria_t& c1, const Batteria_t& c2) {
