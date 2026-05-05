@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.1)
+cmake_minimum_required(VERSION 4.0)
 project(never_give_up)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -6,4 +6,5 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(never_give_up main.cpp
         includes/libs.h
         includes/types.h
-        sources/libs.cpp)
+        sources/libs.cpp
+        includes/libs.h)
