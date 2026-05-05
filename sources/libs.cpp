@@ -18,7 +18,7 @@ bool before(const Tempo_t& tempo1, const Tempo_t& tempo2) {
 
 // True se tempo1 viene dopo tempo2
 bool after(const Tempo_t& tempo1, const Tempo_t& tempo2) {
-    if (tempo1 < tempo2) {
+    if (tempo1 > tempo2) {
         return true;
     }
 };
