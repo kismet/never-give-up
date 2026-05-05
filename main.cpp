@@ -2,7 +2,6 @@
 
 #include "includes/libs.h"
 #include "includes/types.h"
-extern Traccia_t;
 
 using namespace std;
 /*

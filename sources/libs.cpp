@@ -28,7 +28,22 @@ bool crea_traccia(Traccia_t& t, uint16_t o, uint8_t m, uint8_t s, uint32_t ms) {
 
 // Somma la durata delle tracce ed il risultato va in traccia1
 void accoda(Traccia_t& traccia1, Traccia_t& traccia2) {
-
+    traccia1.ore=traccia1.ore+traccia2.ore;
+    traccia1.minuti=traccia1.minuti+traccia2.minuti;
+    traccia1.secondi=traccia1.secondi+traccia2.secondi;
+    traccia1.microsecondi=traccia1.microsecondi+traccia2.microsecondi;
+    while (traccia1.microsecondi>=1000000) {
+         traccia1.secondi++;
+        traccia1.microsecondi-=1000000;
+    }
+    while (traccia1.secondi>=60) {
+        traccia1.minuti++;
+        traccia1.secondi-=60;
+    }
+    while (traccia1.minuti>=60) {
+        traccia1.ore++;
+        traccia1.minuti-=60;
+    }
 }
 
 // Sottrae la durata di traccia2 da traccia1 se possibile e restituisce true altrimenti restituisce false e non effettua
