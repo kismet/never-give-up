@@ -24,10 +24,10 @@ int main() {
     stampa_info(&beta);
     crea_traccia(gamma, 1,45, 40, 100);
     stampa_info(&gamma);
-    cout<<stessa_durata(gamma, alpha);
-    cout<<stessa_durata(gamma, gamma);
-    cout<<piu_breve(alpha, gamma);
-    cout<<piu_lunga(alpha, gamma);
+    cout<<stessa_durata(gamma, alpha)<< endl;
+    cout<<stessa_durata(gamma, gamma)<< endl;
+    cout<<piu_breve(alpha, gamma)<< endl;
+    cout<<piu_lunga(alpha, gamma)<< endl;
 
     accoda(gamma, gamma);
     stampa_info(&gamma);
