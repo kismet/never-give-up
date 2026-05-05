@@ -9,19 +9,25 @@ using namespace std;
  */
 int main() {
 
-    cout<<"Questo è il main che puoi usare per testare la tua libreria"<<endl;
+    cout<<"Questo e' il main che puoi usare per testare la tua libreria"<<endl;
     cout<<"Sentiti libero di aggiungere o corregere il codice in questo file se lo ritieni utile"<<endl;
 
     Batteria_t alpha;
     Batteria_t beta;
     Batteria_t gamma;
 
-    setup(alpha, 12,30, 10, 100);
+    // Setup di alpha + stampa
+    setup( alpha, 1, 1, 1, 1 );
     stampa_autonomia(&alpha);
-    setup(beta, 12,130, -40, 100);
+
+    // Setup di beta + stampa
+    setup(beta, 2,2, 2, 2 );
     stampa_autonomia(&beta);
+
+    // Setup di beta + stampa
     setup(gamma, 1,45, 40, 100);
     stampa_autonomia(&gamma);
+
     cout<<stessa_autonomia(gamma, alpha);
     cout<<stessa_autonomia(gamma, gamma);
     cout<<minor_autonomia(alpha, gamma);

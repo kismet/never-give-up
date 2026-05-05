@@ -14,18 +14,28 @@ using namespace std;
 bool setup(Batteria_t& c, uint64_t o, uint8_t m, uint8_t s, uint32_t ms) {
 
     // Ore
-    c.hours = o;
+    if ( ( o >= 0 ) && ( 0 < 24 ) ) {
+        c.hours = o;
 
-    // Minuti
-    c.minutes = m;
+        // Minuti
+        if ( ( m >= 0 ) && ( m <= 60 ) ) {
+            c.minutes = m;
 
-    // Secondi
-    c.seconds = s;
+            // Secondi
+            if ( ( s >= 0 ) && ( s <= 60 ) ) {
+                c.seconds = s;
 
-    // Ms
-    c.microseconds = ms;
+                // Ms
+                if ( ( ms >= 0 ) && ( ms <= 60 ) ) {
+                    c.microseconds = ms;
 
-    return true;
+                    return true;
+                }
+            }
+        }
+    }
+
+    return false;
 }
 
 bool minor_autonomia(const Batteria_t& c1, const Batteria_t& c2) {

@@ -7,6 +7,8 @@
 #ifndef NEVER_GIVE_UP_LIBS_H
 #define NEVER_GIVE_UP_LIBS_H
 
+#include "../includes/types.h"
+
 // Inizializzazione comoda della struct se l'inizializzazione non è possibile restituisce false
 // Se deve restituire false la funzione deve essere bool no void
 // o deve essere a 64bit
@@ -30,6 +32,5 @@ bool scarica(Batteria_t& c1, const Batteria_t* c2);
 
 //TRUE se e solo se c1 e c2 rappresentano lo stesso Cronometro
 bool stessa_autonomia(const Batteria_t& c1, const Batteria_t& c2);
-
 
 #endif //NEVER_GIVE_UP_LIBS_H
