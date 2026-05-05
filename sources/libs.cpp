@@ -95,4 +95,5 @@ bool scarica(Batteria_t& c1, Batteria_t* c2) {
     else {
         c1.microseconds -= c2->microseconds;
     }
+    return true;
 }
