@@ -1,7 +1,9 @@
 #include <iostream>
 
 #include "includes/types.h"
-#include "sources/libs.cpp"
+//LENZI qui va messa include del .h
+#include "includes/libs.h"
+//#include "sources/libs.cpp"
 
 using namespace std;
 /*
