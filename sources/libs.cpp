@@ -76,6 +76,7 @@ void add(Tempo_t& tempo1, Tempo_t& tempo2) {
 
 bool diff(Tempo_t& tempo1, const Tempo_t* tempo2) {
     if (after(tempo1, *tempo2)) {//LENZI bravo per il riuso!
+        //LENZI si sottrae dai microsecondi e ci sono ir porti
         tempo1.ore=tempo1.ore-tempo2->ore;
         tempo1.minuti=tempo1.minuti-tempo2->minuti;
         tempo1.secondi=tempo1.secondi-tempo2->secondi;
