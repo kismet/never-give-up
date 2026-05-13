@@ -2,6 +2,7 @@
 ## Uso di Git
 - Svolge correttamente
   - Clone/Checkout
+  - Accesso in scrittura al repository
   - Commit locali 
 - Non svolge
   - Creazione del branch
@@ -9,7 +10,7 @@
   - Push del branch sul repository
   - Merge del brach
 
-**Valutazione: 4/10**
+**Valutazione: 4.5/10**
 ## Programmazione
 - [0/1]: Il programma non compila
     - Errore nella gestione degli include
