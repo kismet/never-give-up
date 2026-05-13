@@ -13,7 +13,6 @@
 ## Programmazione
 Compito in bianco non consegna nulla (probabilmente per errore)
 - [0/1]: Il programma non compila
-  - Errore nella gestione degli include
 - [0/5] Nessuna funzione corretta
 - [1/1] Coretti gli errori iniziali del programma
 - [0/1] Completo ma non corretto
