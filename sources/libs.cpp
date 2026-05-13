@@ -47,6 +47,7 @@ void accoda(Traccia_t& traccia1, Traccia_t& traccia2) {
     traccia1.minuti=traccia1.minuti+traccia2.minuti;
     traccia1.secondi=traccia1.secondi+traccia2.secondi;
     traccia1.microsecondi=traccia1.microsecondi+traccia2.microsecondi;
+    //LENZI potevi fare delel funzioni per _sistemare_ le tracce
     while (traccia1.microsecondi>=1000000) {
          traccia1.secondi++;
         traccia1.microsecondi-=1000000;
@@ -64,6 +65,7 @@ void accoda(Traccia_t& traccia1, Traccia_t& traccia2) {
 // Sottrae la durata di traccia2 da traccia1 se possibile e restituisce true altrimenti restituisce false e non effettua
 // la sottrazione. La sottrazione non è valida traccia1 diventa negativa
 bool taglia(Traccia_t& traccia1, const Traccia_t* traccia2) {
+    //LENZI sbagliata la logica, le sottrazioni si fanno dai microsecondi a salire
     Traccia_t tmp=traccia1;
     if (tmp.ore-traccia2->ore<0) {
         return false;
@@ -89,6 +91,7 @@ bool piu_breve(const Traccia_t& traccia1, const Traccia_t& traccia2) {
     if (traccia1.ore>=traccia2.ore) {
         return false;
     }
+    //LENZI sbagliata la logica se (traccia1.ore<traccia2.ore) allora è TRUE non diepende dai minuti
     if (traccia1.minuti>=traccia2.minuti) {
         return false;
     }
@@ -103,6 +106,7 @@ bool piu_breve(const Traccia_t& traccia1, const Traccia_t& traccia2) {
 
 // True se traccia1 è più lunga traccia2
 bool piu_lunga(const Traccia_t& traccia1, const Traccia_t& traccia2) {
+    //LENZI sbagliata la logica se (traccia1.ore>traccia2.ore) allora è TRUE non diepende dai minuti
     if (traccia1.ore<=traccia2.ore) {
         return false;
     }
