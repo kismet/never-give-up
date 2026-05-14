@@ -11,7 +11,7 @@
 using namespace std;
 
 bool setup(Batteria_t& c, uint64_t o, uint8_t m, uint8_t s, uint32_t ms) {
-
+    //LENZI prima devi verificare e poi assegni i valori
     // Ore
     if ( ( o >= 0 ) && ( 0 < 24 ) ) {
         c.hours = o;
@@ -40,6 +40,7 @@ bool setup(Batteria_t& c, uint64_t o, uint8_t m, uint8_t s, uint32_t ms) {
 bool minor_autonomia(const Batteria_t& c1, const Batteria_t& c2) {
 
     if ( c1.hours < c2.hours ) {
+        //LENZI errore di logica se c1.hours < c2.hours non serve fare ulteriori controlli
         if ( c1.minutes < c2.minutes ) {
             if ( c1.seconds < c2.seconds ) {
                 if ( c1.microseconds < c2.microseconds ) {
@@ -60,6 +61,7 @@ void stampa_autonomia(Batteria_t* c) {
 bool maggior_autonomia(const Batteria_t& c1, const Batteria_t& c2) {
 
     if ( c1.hours > c2.hours ) {
+        //LENZI errore di logica se c1.hours > c2.hours non serve fare ulteriori controlli
         if ( c1.minutes > c2.minutes ) {
             if ( c1.seconds > c2.seconds ) {
                 if ( c1.microseconds > c2.microseconds ) {
@@ -74,7 +76,7 @@ bool maggior_autonomia(const Batteria_t& c1, const Batteria_t& c2) {
 }
 
 void ricarica(Batteria_t& c1, Batteria_t& c2) {
-
+    //LENZI mancano i riporti
     c1.hours += c2.hours;
     c1.minutes += c2.minutes;
     c1.seconds += c2.seconds;
@@ -83,7 +85,7 @@ void ricarica(Batteria_t& c1, Batteria_t& c2) {
 }
 
 bool scarica( Batteria_t& c1, const Batteria_t* c2) {
-
+    //LENZI prima devi controllare se si può fare e poi fai la sottrazione
     if ( ( c1.hours - c2->hours ) > 0 ) {
         c1.hours -= c2->hours;
 
