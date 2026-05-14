@@ -15,6 +15,7 @@ bool setup(Batteria_t& c, uint16_t o, uint8_t m, uint8_t s, uint32_t ms) {
     c.minutes = m;
     c.seconds = s;
     c.microseconds = ms;
+    //LENZI mancano i controlli di quando il tempo non è corretto
     /*
     if () {
         return false;
@@ -25,7 +26,7 @@ bool setup(Batteria_t& c, uint16_t o, uint8_t m, uint8_t s, uint32_t ms) {
 bool minor_autonomia(const Batteria_t& c1, const Batteria_t& c2) {
     if(c1.hours < c2.hours) {
         return true;
-    }
+    } //LENZI errore di logica non funziona
     else if(c1.minutes < c2.minutes) {
         return true;
     }
@@ -46,7 +47,7 @@ void stampa_autonomia(Batteria_t* c) {
 bool maggior_autonomia(const Batteria_t& c1, const Batteria_t& c2) {
     if(c1.hours < c2.hours) {
         return false;
-    }
+    } //LENZI errore di logica non funziona
     else if(c1.minutes < c2.minutes) {
         return false;
     }
@@ -61,6 +62,7 @@ bool maggior_autonomia(const Batteria_t& c1, const Batteria_t& c2) {
 }
 
 void ricarica(Batteria_t& c1, Batteria_t& c2) {
+    //LENZI mancano i riporti
     c1.hours += c2.hours;
     c1.minutes += c2.minutes;
     c1.seconds += c2.seconds;
@@ -73,7 +75,8 @@ bool scarica(Batteria_t& c1, Batteria_t* c2) {
     copia1.minutes = c1.minutes;
     copia1.seconds = c1.seconds;
     copia1.microseconds = c1.microseconds;
-
+    //LENZI si sottrae dai microsecondi
+    //LENZI di logica devi prima vedere se fattibile e poi fare la sottrazione
     if(c1.hours-c2->hours < 0) {
         return false;
     }
