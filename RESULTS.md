@@ -6,9 +6,9 @@
 ## Programmazione
  - [0/1]: Il programma non compila 
    - Errore nella gestione degli include
- - [1/5] Solo la funzione print corretta
+ - [2/5] Solo la funzione print corretta
  - [1/1] Coretti gli errori iniziali del programma
  - [1/1] Completo ma non corretto
  - [1/1] Uso corretto delle struct e puntatori
 
-**Valutazione: 4/10**
+**Valutazione: 6/10**
