@@ -13,6 +13,7 @@ bool setup(Batteria_t& c, uint16_t o, uint8_t m, uint8_t s, uint32_t ms) {
     bool inizializzazioneCorretta = true;
 
     c.hours = o;
+    //LENZI che sanso ha confrontare con NULL (errore grave)
     if (c.hours == NULL) {
         inizializzazioneCorretta = false;
     }
@@ -35,6 +36,7 @@ bool setup(Batteria_t& c, uint16_t o, uint8_t m, uint8_t s, uint32_t ms) {
 bool minor_autonomia(const Batteria_t &c1, const Batteria_t &c2) {
     bool autonomia = true;
 
+    //LENZI manca inizializzazione di tempoC1 e tempoC2
     double tempoC1;
     double tempoC2;
 
@@ -64,6 +66,7 @@ void stampa_autonomia(Batteria_t* c) {
 }
 
 void ricarica(Batteria_t& c1, Batteria_t& c2) {
+    //LENZI mancano i riporti
     c1.microseconds += c2.microseconds;
 
     c1.seconds += c2.seconds;
