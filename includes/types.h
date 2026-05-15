@@ -12,9 +12,9 @@
 
 typedef struct Traccia {
     int64_t ore;
-    int64_t minuti;
-    int64_t secondi;
-    int64_t microsecondi;
+    uint8_t minuti;
+    uint8_t secondi;
+    uint32_t microsecondi;
 } Traccia_t;
 
 #endif //NEVER_GIVE_UP_TYPES_H

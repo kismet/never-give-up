@@ -1,18 +1,9 @@
 #include <iostream>
-
-#include "includes/libs.h"
 #include "includes/types.h"
-// Autore: (Tosi Gianmarco)
-// Data:   (2026/05/05)
-// Classe: 3CI
-// Fila:    (B)
+#include "includes/libs.h"
 
 using namespace std;
-/*
- * QUESTO CODICE E' FATTO PER AIUTARTI A TESTARE LA TUA LIBRERIA
- * MA CONTIENE QUALCHE PICCOLA IMPRECISIONE, CHE DOVRAI CORREGGERE PRIMA DI RIUSCIRE
- * A COMPILARE
- */
+
 int main() {
 
     cout<<"Questo e' il main che puoi usare per testare la tua libreria"<<endl;
