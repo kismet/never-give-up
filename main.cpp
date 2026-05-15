@@ -1,19 +1,8 @@
-// Autore: (Clipa Amos)
-// Data:   (2026/05/05)
-// Classe: 3CI
-// Fila:    (A)
-
 #include <iostream>
 #include "includes/types.h"
 #include "includes/libs.h"
 
 using namespace std;
-/*
- * QUESTO CODICE E' FATTO PER AIUTARTI A TESTARE LA TUA LIBRERIA
- * MA CONTIENE QUALCHE PICCOLA IMPRECISIONE, CHE DOVRAI CORREGGERE PRIMA DI RIUSCIRE
- * A COMPILARE
- */
-
 
 int main() {
 
@@ -30,10 +19,10 @@ int main() {
     print(&beta);
     create(gamma, 1,45, 40, 100);
     print(&gamma);
-    cout<<equal(gamma, alpha);
-    cout<<equal(gamma, gamma);
-    cout<<before(alpha, gamma);
-    cout<<after(alpha, gamma);
+    cout<<equal(gamma, alpha)<<endl;
+    cout<<equal(gamma, gamma)<<endl;
+    cout<<before(alpha, gamma)<<endl;
+    cout<<after(alpha, gamma)<<endl;
 
     add(gamma, gamma);
     print(&gamma);
