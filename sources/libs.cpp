@@ -42,7 +42,7 @@ void accoda(Traccia_t& a, Traccia_t& b) {
     micro_to_time(a,alpha);
 }
 
-// Sottrae la durata di traccia2 da traccia1 se possibile e restituisce true altrimenti restituisce false e non effettua
+// Sottrae la durata di a da b se possibile e restituisce true altrimenti restituisce false e non effettua
 // la sottrazione. La sottrazione non è valida traccia1 diventa negativa
 bool taglia(Traccia_t& a, const Traccia_t* b) {
     if (piu_breve(a,*b)) return false;
@@ -53,7 +53,7 @@ bool taglia(Traccia_t& a, const Traccia_t* b) {
     micro_to_time(a,alpha);
 }
 
-// True se traccia1 è meno lunga di traccia2
+// True se a è meno lunga di b
 bool piu_breve(const Traccia_t& a, const Traccia_t& b) {
     uint64_t alpha = time_to_micro(&a);
     uint64_t beta = time_to_micro(&b);
@@ -61,7 +61,7 @@ bool piu_breve(const Traccia_t& a, const Traccia_t& b) {
     return alpha<beta;
 }
 
-// True se traccia1 è più lunga traccia2
+// True se a è più lunga b
 bool piu_lunga(const Traccia_t& a, const Traccia_t& b) {
     uint64_t alpha = time_to_micro(&a);
     uint64_t beta = time_to_micro(&b);
@@ -69,7 +69,7 @@ bool piu_lunga(const Traccia_t& a, const Traccia_t& b) {
     return alpha>beta;
 }
 
-// True se e solo se traccia1 e traccia2 sono uguali
+// True se e solo se a e b sono uguali
 bool stessa_durata(const Traccia_t& a, const Traccia_t& b) {
     uint64_t alpha = time_to_micro(&a);
     uint64_t beta = time_to_micro(&b);
