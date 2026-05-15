@@ -2,6 +2,25 @@
 #include "../includes/libs.h"
 #include <iostream>
 
+void normalizza(Tempo_t& tempo) {
+    uint16_t tmp;
+    if (tempo.microsecondi > 1'000'000) {
+        tmp = tempo.microsecondi / 1'000'000;
+        tempo.microsecondi = tempo.microsecondi % 1'000'000;
+        tempo.secondi += tmp;
+    }
+    if (tempo.secondi > 60) {
+        tmp = tempo.secondi / 60;
+        tempo.secondi = tempo.secondi % 60;
+        tempo.minuti += tmp;
+    }
+    if (tempo.minuti > 60) {
+        tmp = tempo.minuti / 60;
+        tempo.minuti = tempo.minuti % 60;
+        tempo.ore += tmp;
+    }
+}
+
 // Inizializzazione comoda della struct se l'inizializzazione non è possibile restituisce false
 bool create(Tempo_t& t, uint16_t o, uint8_t m, uint8_t s, uint32_t ms) {
 
